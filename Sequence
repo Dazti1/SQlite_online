@@ -1,0 +1,22 @@
+CREATE table Persona
+(ID int,
+ nombre varchar);
+
+insert into persona (ID, nombre) values (1, 'Javier');
+insert into persona (ID, nombre) values (2, 'Pedro');
+select * from Persona
+TRUNCATE TABLE persona
+delete from persona where id=1;
+
+create sequence table_id_seq_3
+  increment 8
+  MINVALUE 1
+  MAXVALUE 5146514685465
+  START 4
+  cache 1;
+  
+  -- insertando un registro
+ 
+insert into persona (id, nombre) values (nextval('table_id_seq_3'),'Ana');
+select * from persona order by id asc;
+select id, count (id) from Persona group by id
